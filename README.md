@@ -36,6 +36,18 @@ orders.order_id -> order_items.order_id <br>
 products.product_id -> reviews.product_id <br>
 users.user_id -> reviews.user_id <br>
 
+## Проблемы источников данных
+
+Выявлены проблемы для устранения: <br>
+В таблице users встречаются пропуски в колонке country <br> 
+В таблице orders встречаются пропуски в колонке payment_method <br>
+В таблице reviews встречаются пропуски в колонке review_text <br>
+В таблице order_items встречаются пропуски в колонке discount <br>
+В таблице products встречаются пропуски в колонке rating <br>
+В таблицах orders, order_items и reviews используются случайные значения для внешних ключей <br>
+(user_id, product_id, order_id). <br>
+Это может привести к тому, что некоторые строки будут ссылаться на несуществующие записи в других таблицах.<br>
+
 ## Описание каждой таблицы
 
 ### users (информация о пользователях)
